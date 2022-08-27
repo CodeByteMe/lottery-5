@@ -8,6 +8,7 @@
 		<module>lottery-infrastructure</module>
 		<module>lottery-interfaces</module>
 		<module>lottery-rpc</module>
+		<module>lottery-common</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
