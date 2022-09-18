@@ -1,0 +1,5 @@
+model 存放 聚合对象
+service 是具体业务领域逻辑实现层
+
+algorithm 是抽奖策略
+draw 是策略包装

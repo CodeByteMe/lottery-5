@@ -1,17 +1,19 @@
 package site.sanniu.infrastructure.po;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 /**
- * 抽奖详情信息
+ * 抽奖详情信息 不分库分表
  * @Author sanniu
  * @Description //TODO $
  * @Date $ $
  **/
 public class StrategyDetail {
 
-    private Long id;
+    /**
+     * 自增ID
+     */
+    private String id;
 
     /**
      * 策略ID
@@ -21,27 +23,43 @@ public class StrategyDetail {
     /**
      * 奖品ID
      */
-    private Long awardId;
+    private String awardId;
 
     /**
-     * 奖品数量
+     * 奖品名称
      */
-    private int awardCount;
+    private String awardName;
+
+    /**
+     * 奖品库存
+     */
+    private Integer awardCount;
+
+    /**
+     * 奖品剩余库存
+     */
+    private Integer awardSurplusCount;
 
     /**
      * 中奖概率
      */
     private BigDecimal awardRate;
 
-    private Date createTime;
+    /**
+     * 创建时间
+     */
+    private String createTime;
 
-    private Date updateTime;
+    /**
+     * 修改时间
+     */
+    private String updateTime;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -53,20 +71,36 @@ public class StrategyDetail {
         this.strategyId = strategyId;
     }
 
-    public Long getAwardId() {
+    public String getAwardId() {
         return awardId;
     }
 
-    public void setAwardId(Long awardId) {
+    public void setAwardId(String awardId) {
         this.awardId = awardId;
     }
 
-    public int getAwardCount() {
+    public String getAwardName() {
+        return awardName;
+    }
+
+    public void setAwardName(String awardName) {
+        this.awardName = awardName;
+    }
+
+    public Integer getAwardCount() {
         return awardCount;
     }
 
-    public void setAwardCount(int awardCount) {
+    public void setAwardCount(Integer awardCount) {
         this.awardCount = awardCount;
+    }
+
+    public Integer getAwardSurplusCount() {
+        return awardSurplusCount;
+    }
+
+    public void setAwardSurplusCount(Integer awardSurplusCount) {
+        this.awardSurplusCount = awardSurplusCount;
     }
 
     public BigDecimal getAwardRate() {
@@ -77,19 +111,20 @@ public class StrategyDetail {
         this.awardRate = awardRate;
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
-    public Date getUpdateTime() {
+    public String getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
 }
+

@@ -3,25 +3,40 @@ package site.sanniu.infrastructure.po;
 import java.util.Date;
 
 /**
- * 用户活动参与次鼠标 分库
+ * 用户活动参与次 分库不分表
  * @Author sanniu
  * @Description //TODO $
  * @Date $ $
  **/
 public class UserTakeActivityCount {
 
+    /**
+     * 自增ID
+     */
     private Long id;
-
-    private String uid;
-
+    /**
+     * 用户ID
+     */
+    private String uId;
+    /**
+     * 活动ID
+     */
     private Long activityId;
-
-    private int totalCount;
-
-    private int leftCount;
-
+    /**
+     * 可领取次数
+     */
+    private Integer totalCount;
+    /**
+     * 已领取次数
+     */
+    private Integer leftCount;
+    /**
+     * 创建时间
+     */
     private Date createTime;
-
+    /**
+     * 更新时间
+     */
     private Date updateTime;
 
     public Long getId() {
@@ -32,12 +47,12 @@ public class UserTakeActivityCount {
         this.id = id;
     }
 
-    public String getUid() {
-        return uid;
+    public String getuId() {
+        return uId;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 
     public Long getActivityId() {
@@ -48,19 +63,19 @@ public class UserTakeActivityCount {
         this.activityId = activityId;
     }
 
-    public int getTotalCount() {
+    public Integer getTotalCount() {
         return totalCount;
     }
 
-    public void setTotalCount(int totalCount) {
+    public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
     }
 
-    public int getLeftCount() {
+    public Integer getLeftCount() {
         return leftCount;
     }
 
-    public void setLeftCount(int leftCount) {
+    public void setLeftCount(Integer leftCount) {
         this.leftCount = leftCount;
     }
 

@@ -10,46 +10,39 @@ import java.util.Date;
  **/
 public class UserStrategyExport {
 
+    /** 自增ID */
     private Long id;
-
-    private String uid;
-
-    /**
-     * 活动ID
-     */
+    /** 用户ID */
+    private String uId;
+    /** 活动ID */
     private Long activityId;
-
-    /**
-     * 订单ID
-     */
+    /** 订单ID */
     private Long orderId;
-
-    /**
-     * 策略ID
-     */
+    /** 策略ID */
     private Long strategyId;
-
-    private int strategyType;
-
-    private int grantType;
-
+    /** 策略方式（1:单项概率、2:总体概率） */
+    private Integer strategyMode;
+    /** 发放奖品方式（1:即时、2:定时[含活动结束]、3:人工） */
+    private Integer grantType;
+    /** 发奖时间 */
     private Date grantDate;
-
-    private int grantState;
-
-    /**
-     * 奖品ID
-     */
-    private Long awardId;
-
+    /** 发奖状态 */
+    private Integer grantState;
+    /** 发奖ID */
+    private String awardId;
+    /** 奖品类型（1:文字描述、2:兑换码、3:优惠券、4:实物奖品） */
+    private Integer awardType;
+    /** 奖品名称 */
     private String awardName;
-
+    /** 奖品内容「文字描述、Key、码」 */
     private String awardContent;
-
+    /** 防重ID */
     private String uuid;
-
+    /** 消息发送状态（0未发送、1发送成功、2发送失败） */
+    private Integer MqState;
+    /** 创建时间 */
     private Date createTime;
-
+    /** 更新时间 */
     private Date updateTime;
 
     public Long getId() {
@@ -60,12 +53,12 @@ public class UserStrategyExport {
         this.id = id;
     }
 
-    public String getUid() {
-        return uid;
+    public String getuId() {
+        return uId;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 
     public Long getActivityId() {
@@ -92,19 +85,19 @@ public class UserStrategyExport {
         this.strategyId = strategyId;
     }
 
-    public int getStrategyType() {
-        return strategyType;
+    public Integer getStrategyMode() {
+        return strategyMode;
     }
 
-    public void setStrategyType(int strategyType) {
-        this.strategyType = strategyType;
+    public void setStrategyMode(Integer strategyMode) {
+        this.strategyMode = strategyMode;
     }
 
-    public int getGrantType() {
+    public Integer getGrantType() {
         return grantType;
     }
 
-    public void setGrantType(int grantType) {
+    public void setGrantType(Integer grantType) {
         this.grantType = grantType;
     }
 
@@ -116,20 +109,28 @@ public class UserStrategyExport {
         this.grantDate = grantDate;
     }
 
-    public int getGrantState() {
+    public Integer getGrantState() {
         return grantState;
     }
 
-    public void setGrantState(int grantState) {
+    public void setGrantState(Integer grantState) {
         this.grantState = grantState;
     }
 
-    public Long getAwardId() {
+    public String getAwardId() {
         return awardId;
     }
 
-    public void setAwardId(Long awardId) {
+    public void setAwardId(String awardId) {
         this.awardId = awardId;
+    }
+
+    public Integer getAwardType() {
+        return awardType;
+    }
+
+    public void setAwardType(Integer awardType) {
+        this.awardType = awardType;
     }
 
     public String getAwardName() {
@@ -156,6 +157,14 @@ public class UserStrategyExport {
         this.uuid = uuid;
     }
 
+    public Integer getMqState() {
+        return MqState;
+    }
+
+    public void setMqState(Integer mqState) {
+        MqState = mqState;
+    }
+
     public Date getCreateTime() {
         return createTime;
     }
@@ -172,3 +181,4 @@ public class UserStrategyExport {
         this.updateTime = updateTime;
     }
 }
+
