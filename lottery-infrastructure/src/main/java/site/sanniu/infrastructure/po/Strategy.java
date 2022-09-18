@@ -3,7 +3,7 @@ package site.sanniu.infrastructure.po;
 import java.util.Date;
 
 /**
- * 抽奖策略信息
+ * 抽奖策略信息 不分库分表
  * @Author sanniu
  * @Description //TODO $
  * @Date $ $
@@ -11,12 +11,12 @@ import java.util.Date;
 public class Strategy {
 
     /**
-     * 自鞥ID
+     * 自增ID
      */
     private Long id;
 
     /**
-     * 策略业务ID
+     * 策略ID
      */
     private Long strategyId;
 
@@ -26,14 +26,14 @@ public class Strategy {
     private String strategyDesc;
 
     /**
-     * 策略方式 1 单项概率  2 总体概率
+     * 策略方式「1:单项概率、2:总体概率」
      */
-    private int strategyMode;
+    private Integer strategyMode;
 
     /**
-     * 发放奖品方式 1 即时 2 定时 3 人工
+     * 发放奖品方式「1:即时、2:定时[含活动结束]、3:人工」
      */
-    private int grantType;
+    private Integer grantType;
 
     /**
      * 发放奖品时间
@@ -45,8 +45,14 @@ public class Strategy {
      */
     private String extInfo;
 
+    /**
+     * 创建时间
+     */
     private Date createTime;
 
+    /**
+     * 修改时间
+     */
     private Date updateTime;
 
     public Long getId() {
@@ -73,19 +79,19 @@ public class Strategy {
         this.strategyDesc = strategyDesc;
     }
 
-    public int getStrategyMode() {
+    public Integer getStrategyMode() {
         return strategyMode;
     }
 
-    public void setStrategyMode(int strategyMode) {
+    public void setStrategyMode(Integer strategyMode) {
         this.strategyMode = strategyMode;
     }
 
-    public int getGrantType() {
+    public Integer getGrantType() {
         return grantType;
     }
 
-    public void setGrantType(int grantType) {
+    public void setGrantType(Integer grantType) {
         this.grantType = grantType;
     }
 
@@ -121,3 +127,4 @@ public class Strategy {
         this.updateTime = updateTime;
     }
 }
+

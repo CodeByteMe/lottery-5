@@ -3,51 +3,32 @@ package site.sanniu.infrastructure.po;
 import java.util.Date;
 
 /**
- * 奖品信息
+ * 奖品信息 不分库分表
  * @Author sanniu
  * @Description //TODO $
  * @Date $ $
  **/
 public class Award {
 
-    /**
-     * 自增ID
-     */
+    /** 自增ID */
     private Long id;
 
-    /**
-     * 奖品ID
-     */
-    private Long awardId;
+    /** 奖品ID */
+    private String awardId;
 
-    /**
-     * 奖品类型【文字描述、兑换码、优惠卷、实物商品】
-     */
-    private int awardType;
+    /** 奖品类型（1:文字描述、2:兑换码、3:优惠券、4:实物奖品） */
+    private Integer awardType;
 
-    /**
-     * 奖品数量
-     */
-    private int awardCount;
-
-    /**
-     * 奖品名称
-     */
+    /** 奖品名称 */
     private String awardName;
 
-    /***
-     * 奖品描述
-     */
+    /** 奖品内容「描述、奖品码、sku」 */
     private String awardContent;
 
-    /**
-     * 创建时间
-     */
+    /** 创建时间 */
     private Date createTime;
 
-    /**
-     * 修改时间
-     */
+    /** 修改时间 */
     private Date updateTime;
 
     public Long getId() {
@@ -58,28 +39,20 @@ public class Award {
         this.id = id;
     }
 
-    public Long getAwardId() {
+    public String getAwardId() {
         return awardId;
     }
 
-    public void setAwardId(Long awardId) {
+    public void setAwardId(String awardId) {
         this.awardId = awardId;
     }
 
-    public int getAwardType() {
+    public Integer getAwardType() {
         return awardType;
     }
 
-    public void setAwardType(int awardType) {
+    public void setAwardType(Integer awardType) {
         this.awardType = awardType;
-    }
-
-    public int getAwardCount() {
-        return awardCount;
-    }
-
-    public void setAwardCount(int awardCount) {
-        this.awardCount = awardCount;
     }
 
     public String getAwardName() {
@@ -114,3 +87,4 @@ public class Award {
         this.updateTime = updateTime;
     }
 }
+

@@ -1,0 +1,22 @@
+package site.sanniu.domain.rule.service.engine;
+
+import site.sanniu.domain.rule.model.req.DecisionMatterReq;
+import site.sanniu.domain.rule.model.res.EngineResult;
+
+/**
+ * @Author sanniu
+ * @Description 规则过滤器引擎
+ * @Date $ $
+ **/
+public interface EngineFilter {
+
+    /**
+     * 规则过滤器接口
+     *
+     * @param matter      规则决策物料
+     * @return            规则决策结果
+     */
+    EngineResult process(final DecisionMatterReq matter);
+
+}
+
